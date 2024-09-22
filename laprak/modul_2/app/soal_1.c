@@ -8,12 +8,12 @@ int main()
     scanf("%d", &number);
     
     if (number == 0) {
-        printf("%d Adalah bilangan  Nol", number);
+        printf("\n%d Adalah bilangan Nol\n", number);
     } else {
         if (number > 0) {
-            printf("%d Adalah bilangan positif", number);
+            printf("\n%d Adalah bilangan positif\n", number);
         } else {
-            printf("%d Adalah bilangan negatif", number);
+            printf("\n%d Adalah bilangan negatif\n", number);
         } 
     }
 

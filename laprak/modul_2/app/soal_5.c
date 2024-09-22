@@ -41,15 +41,15 @@ int main()
     printf("Kode Barang     : %s\n", kodeBarang);
     printf("Nama Barang     : %s", namaBarang);
     printf("--------------------------------------------\n");
-    printf("Harga Barang    : Rp %d\n", hargaBeli);
+    printf("Harga Barang    : Rp %d/%s\n", hargaBeli, satuan);
     printf("Jumlah Beli     : %d\n", jumlahBeli);
-    printf("Satuan          : %s\n", satuan);
     printf("--------------------------------------------\n");
     printf("Total Harga     : Rp %d\n", totalHarga);
     printf("--------------------------------------------\n");
     printf("Potongan        : %.0f%%\n", besarPotongan * 100);
     printf("Total Potongan  : Rp %d\n", potongan);
     printf("Total Bayar     : Rp %d\n", totalBayar);
+    printf("--------------------------------------------\n");
 
     return 0;
 }

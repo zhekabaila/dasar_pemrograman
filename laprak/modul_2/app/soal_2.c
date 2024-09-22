@@ -15,9 +15,9 @@ int main()
     getchar();
     
     if ((strcmp(inputUsername, username) == 0) && (inputPassword == password)) {
-        printf("\nSelamat datang %s", inputUsername);
+        printf("\nSelamat datang %s\n", inputUsername);
     } else {
-        printf("\nMaaf, anda tidak dapat masuk");
+        printf("\nMaaf, anda tidak dapat masuk\n");
     }
 
     return 0;

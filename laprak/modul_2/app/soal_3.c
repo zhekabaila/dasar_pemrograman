@@ -66,7 +66,7 @@ int main()
         printf("NILAI PRESENSI      : %d \n", absen);
         printf("NILAI AKHIR ANGKA YANG DIDAPATKAN %d \n", nilai);
         printf("NILAI AKHIR HURUF YANG DIDAPATKAN %c \n", grade);
-        printf("=============================================");
+        printf("=============================================\n");
     
         return 0;
 }
