@@ -3,7 +3,7 @@
 
 int main()
 {
-    int jumlah, batas;
+    int jumlah = 1, batas;
     float average;
 
     printf("Masukan batas nilai: ");
@@ -13,7 +13,7 @@ int main()
         jumlah += i;
     }
 
-    average = (float)jumlah / (float)batas;
+    average = (float)jumlah / batas;
 
     printf("\nHasil penjumlahan dari 1 hingga %d adalah: %d\n", batas, jumlah);
     printf("Rata-rata nilai adalah: %.2f%%\n", average);
