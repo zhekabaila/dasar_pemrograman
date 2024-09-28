@@ -33,13 +33,20 @@ int main() {
     // printf("masukan batas persegi panjang: ");
     // scanf("%d", &batas);
     
-    int batas = 5;
+    // int batas = 10;
 
-    for (int i = 1; i <= batas; i++)
-    {
-        for (int j = batas; j >= i; j--)
-        {
-            printf("* ");
+    // for (int i = 1; i <= batas; i++)
+    // {
+    //     for (int j = batas; j >= i; j--)
+    //     {   
+    //         printf("* ");
+    //     }
+    //     printf("\n");
+    // }
+
+    for (int i = 2020; i <= 2035; i+=5) {
+        for (int j = 2020; j <= i; j+=5) {
+            printf("%d ", i);
         }
         printf("\n");
     }
