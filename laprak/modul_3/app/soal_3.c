@@ -2,7 +2,7 @@
 
 int main()
 {
-    int jumlah, batas;
+    int jumlah = 1, batas;
     float average;
 
     printf("Masukan batas nilai > ");

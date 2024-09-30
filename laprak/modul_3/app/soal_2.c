@@ -3,7 +3,7 @@
 
 int main()
 {
-    int jumlah, batas;
+    int jumlah = 1, batas;
 
     printf("Masukan batas nilai > ");
     scanf("%d", &batas);
