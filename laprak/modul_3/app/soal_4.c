@@ -4,8 +4,7 @@
 int main()
 {
     int percobaan = 1, inputPin, pin = 5555, pilihan;
-    int saldo = 1000000;
-    char konfirmasi;
+    long saldo = 1000000;
 
     printf("\n=====================================\n");
     printf("|    Selamat Datang di ATM Zheka    |");
@@ -26,6 +25,7 @@ int main()
                 printf("\n========= Silahkan pilih menu ==========\n");
                 printf("| [1] Cek Saldo                        |\n");
                 printf("| [2] Tarik Tunai                      |\n");
+                printf("| [3] Transfer                         |\n");
                 printf("| [0] Keluar                           |\n");
                 printf("======================================== \n");
                 printf("Pilih menu > ");
@@ -34,58 +34,56 @@ int main()
                 
                 switch (pilihan) {
                     case 1:
-                        printf("\n\n-----------------------------------------\n\n");
-                        printf("Saldo yang anda miliki sebesar: Rp. %d", saldo);
-                        printf("\n\n-----------------------------------------\n\n");
-
-                        printf("Apakah anda akan melanjutkan transaksi? (y/n) > ");
-                        scanf("%c", &konfirmasi);
-                        getchar();
-
-                        if (konfirmasi == 'n') {
-                            printf("\n\n-----------------------------------------\n\n");
-                            printf("Terimakasih, sampai bertemu kembali.");
-                            printf("\n\n-----------------------------------------\n\n");
-                            return 0;
-                        }
-                        
+                        printf("\n-----------------------------------------\n");
+                        printf("Saldo yang anda miliki sebesar: Rp. %ld", saldo);
+                        printf("\n-----------------------------------------\n");
                         break;
                     case 2:
-                        int jumlahSaldoTarik;
-                        printf("\n\n-----------------------------------------\n\n");
+                        long jumlahSaldoTarik;
+                        printf("\n-----------------------------------------\n");
                         printf("Masukan jumlah yang ingin anda tarik > Rp. ");
-                        scanf("%d", &jumlahSaldoTarik);
+                        scanf("%ld", &jumlahSaldoTarik);
                         getchar();
 
                         if (jumlahSaldoTarik > saldo) {
                             printf("Saldo anda tidak mencukupi. Silahkan coba lagi.");
                         } else {
                             saldo -= jumlahSaldoTarik;
-                            printf("Jumlah saldo anda sekarang adalah > Rp. %d", saldo);
+                            printf("Sisa saldo anda sekarang sebesar Rp. %ld", saldo);
                         }
-                        printf("\n\n-----------------------------------------\n\n");
+                        printf("\n-----------------------------------------\n");
+                        break;
+                    case 3:
+                        long rekeningTujuan, jumlahTransfer;
 
-                        printf("Apakah anda akan melanjutkan transaksi? (y/n) > ");
-                        scanf("%c", &konfirmasi);
+                        printf("\n-----------------------------------------\n");
+                        printf("Masukan rekening tujuan anda > ");
+                        scanf("%ld", &rekeningTujuan);
                         getchar();
 
-                        if (konfirmasi == 'n') {
-                            printf("\n\n-----------------------------------------\n\n");
-                            printf("Terimakasih, sampai bertemu kembali.");
-                            printf("\n\n-----------------------------------------\n\n");
-                            return 0;
+                        printf("Masukan jumlah yang ingin anda kirim > Rp. ");
+                        scanf("%ld", &jumlahTransfer);
+                        getchar();
+
+                        if (jumlahTransfer > saldo) {
+                            printf("\nSaldo anda tidak mencukupi. Silahkan coba lagi.");
+                        } else {
+                            saldo -= jumlahTransfer;
+                            printf("\nSaldo sebesar Rp. %ld telah berhasil dikirim ke rekening %ld\n", jumlahTransfer, rekeningTujuan);
+                            printf("Sisa saldo anda sekarang sebesar Rp. %ld", saldo);
                         }
 
+                        printf("\n-----------------------------------------\n");
                         break;
                     case 0:
-                        printf("\n\n-----------------------------------------\n\n");
+                        printf("\n-----------------------------------------\n");
                         printf("Terimakasih, sampai bertemu kembali.");
-                        printf("\n\n-----------------------------------------\n\n");
+                        printf("\n-----------------------------------------\n");
                         return 0;
                     default:
-                        printf("\n\n-----------------------------------------\n\n");
-                        printf("Input tidak valid.");
-                        printf("\n\n-----------------------------------------\n\n");
+                        printf("\n-----------------------------------------\n");
+                        printf("Masukan tidak valid.");
+                        printf("\n-----------------------------------------\n");
                 }
             } while (pilihan != 0);
             

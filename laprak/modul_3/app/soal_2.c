@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
-    int jumlah = 1, batas;
+    int jumlah, batas;
 
     printf("Masukan batas nilai > ");
     scanf("%d", &batas);

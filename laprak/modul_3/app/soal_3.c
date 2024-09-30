@@ -2,7 +2,7 @@
 
 int main()
 {
-    int jumlah = 1, batas;
+    int jumlah, batas;
     float average;
 
     printf("Masukan batas nilai > ");
@@ -17,7 +17,7 @@ int main()
     average = (float)jumlah / batas;
 
     printf("\nHasil penjumlahan dari 1 hingga %d adalah %d", batas, jumlah);
-    printf("\nRata-rata hasil dari penjumlahan 1 hingga %d adalah %.2f%%\n", batas, average);
+    printf("\nRata-rata hasil dari penjumlahan 1 hingga %d adalah %.2f\n", batas, average);
 
     return 0;
 }
