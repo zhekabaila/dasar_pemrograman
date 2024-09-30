@@ -5,10 +5,12 @@ int main()
 {
     int jumlah = 1, batas;
 
-    printf("Masukan batas nilai: ");
+    printf("Masukan batas nilai > ");
     scanf("%d", &batas);
+    printf("\n");
 
-    for (int i = 1; i <= batas; i++) {
+    for (int i = 1; i <= batas; i++) { 
+        printf("%d + %d = %d\n", i, jumlah, jumlah + i);
         jumlah += i;
     }
 
