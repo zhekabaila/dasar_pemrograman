@@ -5,7 +5,7 @@ int main() {
         {999, 865, 232, 934, 222},
         {234, 364, 782, 996, 552},
         {333, 222, 555, 888, 777}
-    }; 
+    };
 
     int angkaTerbesar = angka[0][0], barisTerbesar = 0, kolomTerbesar = 0;
     int angkaTerkecil = angka[0][0], barisTerkecil = 0, kolomTerkecil = 0;
