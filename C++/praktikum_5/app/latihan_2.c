@@ -1,50 +1,16 @@
-#include<stdio.h>
-#include<string.h>
-
+#include <stdio.h>
 int main() {
-    // char nama[3][30];
+    int angka[9] = {135, 165, 1, 16, 511, 65, 654, 169, 4}; 
+    int angkaTerbesar = angka[0];
 
-    // int namaLength = sizeof(nama) / sizeof(nama[0]);
-
-    // for (int i = 0; i < namaLength; i++)
-    // {
-    //     printf("Masukkan nama ke-%d: ", i);
-    //     fgets(nama[i], sizeof(nama[i]), stdin);
-    //     nama[i][strlen(nama[i]) - 1] = '\0';
-    // }
-
-    // printf("\nNama yang dimasukan oleh pengguna: \n");
-    // for (int i = 0; i < namaLength; i++) {
-    //     printf("%d. %s\n", i+1, nama[i]);
-    // }
-
-    int angka[2][3];
-
-    int dimensiPertama = sizeof(angka) / sizeof(angka[0]);
-    int dimensiKedua = sizeof(angka[0]) / sizeof(angka[0][0]);
-
-    for (int i = 0; i < dimensiPertama; i++)
+    for (int i = 0; i < 9; i++)
     {
-        for (int j = 0; j < dimensiKedua; j++) {
-            printf("Masukkan angka ke [%d][%d]: ", i, j);
-            scanf("%d", &angka[i][j]);
+        if (angka[i] > angkaTerbesar) {
+            angkaTerbesar = angka[i];
         }
     }
-    
-    printf("\nNilai yang dimasukan oleh pengguna: ");
-    printf("\n{\n");
-    for (int i = 0; i < dimensiPertama; i++) {
-        printf("    {");
-        for (int j = 0; j < dimensiKedua; j++) {
-            printf("%d", angka[i][j]);
-            if (j < 2) {
-                printf(", ");
-            }
-        }
-        printf("},");
-        printf("\n");
-    }
-    printf("}\n");
+
+    printf("Angka terbesar dari array adalah %d\n", angkaTerbesar);
 
     return 0;
 }
