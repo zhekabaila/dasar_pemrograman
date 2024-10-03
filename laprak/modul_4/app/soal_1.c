@@ -1,9 +1,12 @@
 #include <stdio.h>
+
 int main() {
     int angka[5] = {1, 2, 3, 4, 5}; 
     int angkaTerbesar = angka[0], angkaTerkecil = angka[0];
 
-    for (int i = 0; i < 5; i++)
+    int angkaLength = sizeof(angka) / sizeof(angka[0]);
+
+    for (int i = 0; i < angkaLength; i++)
     {
         if (angka[i] > angkaTerbesar) {
             angkaTerbesar = angka[i];
@@ -15,7 +18,7 @@ int main() {
     }
 
     printf("\n{");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < angkaLength; i++)
     {
         printf("%d", angka[i]);
 

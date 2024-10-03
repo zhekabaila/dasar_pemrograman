@@ -10,9 +10,12 @@ int main() {
     int angkaTerbesar = angka[0][0], barisTerbesar = 0, kolomTerbesar = 0;
     int angkaTerkecil = angka[0][0], barisTerkecil = 0, kolomTerkecil = 0;
 
-    for (int i = 0; i < 3; i++)
+    int panjangDimensiPertama = sizeof(angka) / sizeof(angka[0]);
+    int panjangDimensiKedua = sizeof(angka[0]) / sizeof(angka[0][0]);
+
+    for (int i = 0; i < panjangDimensiPertama; i++)
     {
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < panjangDimensiKedua; j++)
         {
             if (angka[i][j] > angkaTerbesar) {
                 angkaTerbesar = angka[i][j];
