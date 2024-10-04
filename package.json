@@ -1,0 +1,12 @@
+{
+  "name": "dasar-pemrograman",
+  "version": "1.0.0",
+  "description": "hello there",
+  "main": "index.js",
+  "scripts": {
+    "laprak": "mkdir -p ./laprak/$npm_config_modul/build && gcc ./laprak/$npm_config_modul/app/$npm_config_file.c -o ./laprak/$npm_config_modul/build/$npm_config_file.exe; ./laprak/$npm_config_modul/build/$npm_config_file.exe",
+    "praktikum": "mkdir -p ./C++/$npm_config_modul/build && gcc ./C++/$npm_config_modul/app/$npm_config_file.c -o ./C++/$npm_config_modul/build/$npm_config_file.exe; ./C++/$npm_config_modul/build/$npm_config_file.exe"
+  },
+  "author": "",
+  "license": "ISC"
+}
