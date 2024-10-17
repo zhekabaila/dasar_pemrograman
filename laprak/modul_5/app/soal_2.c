@@ -8,7 +8,7 @@ typedef struct {
 } Pegawai;
 
 int main() {
-    Buku buku = {"Dasar-Dasar Pemrograman", "Shinta Esabella", 2021};
+    Pegawai buku = {"Dasar-Dasar Pemrograman", "Shinta Esabella", 2021};
     
     printf("Judul Buku          : %s\n", buku.judul);
     printf("Penulis             : %s\n", buku.penulis);
