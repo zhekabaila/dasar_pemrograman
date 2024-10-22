@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "laprak": "sh -c '[ -z \"$npm_config_modul\" ] && echo \"Error: Parameter --modul (modul) dibutuhkan!\" && exit 1; [ -z \"$npm_config_file\" ] && echo \"Error: Parameter --file (file) dibutuhkan!\" && exit 1; mkdir -p ./laprak/$npm_config_modul/build && gcc ./laprak/$npm_config_modul/app/$npm_config_file.c -o ./laprak/$npm_config_modul/build/$npm_config_file.exe && ./laprak/$npm_config_modul/build/$npm_config_file.exe'",
-    "praktikum": "sh -c '[ -z \"$npm_config_modul\" ] && echo \"Error: Parameter --modul (modul) dibutuhkan!\" && exit 1; [ -z \"$npm_config_file\" ] && echo \"Error: Parameter --file (file) dibutuhkan!\" && exit 1; mkdir -p ./C++/$npm_config_modul/build && gcc ./C++/$npm_config_modul/app/$npm_config_file.c -o ./C++/$npm_config_modul/build/$npm_config_file.exe; ./C++/$npm_config_modul/build/$npm_config_file.exe'"
+    "praktikum": "sh -c '[ -z \"$npm_config_modul\" ] && echo \"Error: Parameter --modul (modul) dibutuhkan!\" && exit 1; [ -z \"$npm_config_file\" ] && echo \"Error: Parameter --file (file) dibutuhkan!\" && exit 1; mkdir -p ./praktikum/$npm_config_modul/build && gcc ./praktikum/$npm_config_modul/app/$npm_config_file.c -o ./praktikum/$npm_config_modul/build/$npm_config_file.exe; ./praktikum/$npm_config_modul/build/$npm_config_file.exe'"
   },
   "author": "",
   "license": "ISC",
